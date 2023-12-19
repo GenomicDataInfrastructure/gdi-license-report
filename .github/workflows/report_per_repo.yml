@@ -1,8 +1,6 @@
 name: Report per Repository
 
-on:
-  push:
-    branches: [ "main" ]
+on: workflow_dispatch
 
 jobs:
   ort:

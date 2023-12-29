@@ -51,7 +51,7 @@ Not clear yet why it is under AGPL.
 Not clear yet why it is under AGPL.
 
 ## MIT instead of Apache-2.0
-MIT is okay, but perhaps we should have a common license policy for GDI.
+MIT is okay, but perhaps we should have a common license for all GDI repositories, save exceptions.
 
 ## Missing license
 - GenomicDataInfrastructure/starter-kit-rems

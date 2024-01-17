@@ -53,3 +53,15 @@
 [submodule "repos/cscfi-rems"]
 	path = repos/cscfi-rems
 	url = git@github.com:CSCfi/rems.git
+[submodule "repos/lsaai-docker-gdi"]
+	path = repos/lsaai-docker-oidc-mock
+	url = git@gitlab.ics.muni.cz:perun-proxy-aai/containers/docker-gdi.git
+[submodule "repos/lsaai-docker-ga4gh-broker"]
+	path = repos/lsaai-docker-ga4gh-broker
+	url = git@gitlab.ics.muni.cz:perun-proxy-aai/containers/docker-ga4gh_broker.git
+[submodule "repos/lsaai-ga4gh-broker"]
+	path = repos/lsaai-ga4gh-broker
+	url = git@gitlab.ics.muni.cz:perun-proxy-aai/java/perun-aai-ga4gh-passport-broker.git
+[submodule "repos/lsaai-oidc-mock"]
+	path = repos/lsaai-oidc-mock
+	url = git@gitlab.ics.muni.cz:perun-proxy-aai/java/lsaai-oidc-mock.git

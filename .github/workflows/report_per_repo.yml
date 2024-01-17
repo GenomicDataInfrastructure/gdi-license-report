@@ -44,6 +44,10 @@ jobs:
             sw-name: starter-kit-lsaai-mock
           - repository: GenomicDataInfrastructure/starter-kit-lsaai
             sw-name: starter-kit-lsaai
+          - repository: neicnordic/sensitive-data-archive
+            sw-name: neicnordic/sensitive-data-archive
+          - repository: NBISweden/sda-cli
+            sw-name: sda-cli
             
     runs-on: ubuntu-latest
     steps:

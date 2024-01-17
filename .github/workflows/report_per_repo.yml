@@ -8,54 +8,58 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - repository: GenomicDataInfrastructure/starter-kit-storage-and-interfaces
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-storage-and-interfaces.git
             sw-name: starter-kit-storage-and-interfaces
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-ckanext-gdi-userportal.git
             sw-name: gdi-userportal-ckanext-gdi-userportal
-          - repository: GenomicDataInfrastructure/gdi-userportal-frontend
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-frontend.git
             sw-name: gdi-userportal-frontend
-          - repository: GenomicDataInfrastructure/gdi-userportal-apigateway
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-apigateway.git
             sw-name: gdi-userportal-apigateway
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckan-docker
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-ckan-docker.git
             sw-name: gdi-userportal-ckan-docker
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-dcat
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-ckanext-dcat.git
             sw-name: gdi-userportal-ckanext-dcat
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-harvest
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-ckanext-harvest.git
             sw-name: gdi-userportal-ckanext-harvest
-          - repository: GenomicDataInfrastructure/gdi-userportal-ckanext-scheming
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-ckanext-scheming.git
             sw-name: gdi-userportal-ckanext-scheming
-          - repository: GenomicDataInfrastructure/gdi-userportal-docs
+          - repository: https://github.com/GenomicDataInfrastructure/gdi-userportal-docs.git
             sw-name: gdi-userportal-docs
-          - repository: GenomicDataInfrastructure/starter-kit-beacon2-ri-api
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-beacon2-ri-api.git
             sw-name: starter-kit-beacon2-ri-api
-          - repository: EGA-archive/beacon2-ri-api
+          - repository: https://github.com/EGA-archive/beacon2-ri-api.git
             sw-name: beacon2-ri-api
-          - repository: GenomicDataInfrastructure/starter-kit-rems
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-rems.git
             sw-name: starter-kit-rems
-          - repository: CSCfi/rems
+          - repository: https://github.com/CSCfi/rems.git
             sw-name: rems
-          - repository: GenomicDataInfrastructure/starter-kit-htsget
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-htsget.git
             sw-name: starter-kit-htsget
-          - repository: GenomicDataInfrastructure/starter-kit-containerized-computation
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-containerized-computation.git
             sw-name: starter-kit-containerized-computation
-          - repository: GenomicDataInfrastructure/starter-kit-lsaai-mock
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-lsaai-mock.git
             sw-name: starter-kit-lsaai-mock
-          - repository: GenomicDataInfrastructure/starter-kit-lsaai-mock
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-lsaai-mock.git
             sw-name: starter-kit-lsaai-mock
-          - repository: GenomicDataInfrastructure/starter-kit-lsaai
+          - repository: https://github.com/GenomicDataInfrastructure/starter-kit-lsaai.git
             sw-name: starter-kit-lsaai
-          - repository: neicnordic/sensitive-data-archive
-            sw-name: neicnordic/sensitive-data-archive
-          - repository: NBISweden/sda-cli
+          - repository: https://github.com/neicnordic/sensitive-data-archive.git
+            sw-name: sensitive-data-archive
+          - repository: https://github.com/NBISweden/sda-cli.git
             sw-name: sda-cli
-            
+          - repository: https://gitlab.ics.muni.cz/perun-proxy-aai/containers/docker-gdi.git
+            sw-name: lsaai-docker-gdi
+          - repository: https://gitlab.ics.muni.cz/perun-proxy-aai/containers/docker-ga4gh_broker.git
+            sw-name: lsaai-docker-ga4gh-broker
+          - repository: https://gitlab.ics.muni.cz/perun-proxy-aai/java/perun-aai-ga4gh-passport-broker.git
+            sw-name: lsaai-ga4gh-broker
+          - repository: https://gitlab.ics.muni.cz/perun-proxy-aai/java/lsaai-oidc-mock.git
+            sw-name: lsaai-oidc-mock
     runs-on: ubuntu-latest
     steps:
-      - name: Use HTTPS instead of SSH for Git cloning
-        run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
-      - uses: actions/checkout@v3
-        with:
-          repository: ${{ matrix.repository }}
+      - name: Clone repo
+        run: git clone ${{ matrix.repository }} ${{ matrix.sw-name }}
       - uses: oss-review-toolkit/ort-ci-github-action@b6d71a83acba8619f16b30c008f212a7a572f8e8 #v1
         with:
           report-formats: CycloneDx,WebApp,PlainTextTemplate,Opossum

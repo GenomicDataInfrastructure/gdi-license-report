@@ -54,7 +54,7 @@
 	path = repos/cscfi-rems
 	url = git@github.com:CSCfi/rems.git
 [submodule "repos/lsaai-docker-gdi"]
-	path = repos/lsaai-docker-oidc-mock
+	path = repos/lsaai-docker-gdi
 	url = git@gitlab.ics.muni.cz:perun-proxy-aai/containers/docker-gdi.git
 [submodule "repos/lsaai-docker-ga4gh-broker"]
 	path = repos/lsaai-docker-ga4gh-broker
@@ -65,3 +65,9 @@
 [submodule "repos/lsaai-oidc-mock"]
 	path = repos/lsaai-oidc-mock
 	url = git@gitlab.ics.muni.cz:perun-proxy-aai/java/lsaai-oidc-mock.git
+[submodule "repos/sensitive-data-archive"]
+	path = repos/sensitive-data-archive
+	url = git@github.com:neicnordic/sensitive-data-archive.git
+[submodule "repos/sda-cli"]
+	path = repos/sda-cli
+	url = git@github.com:NBISweden/sda-cli.git

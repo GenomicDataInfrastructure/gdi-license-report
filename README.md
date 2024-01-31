@@ -19,6 +19,8 @@ OSS Review Toolkit for GDI.
 - GenomicDataInfrastructure/starter-kit-containerized-computation - MIT
 - GenomicDataInfrastructure/starter-kit-lsaai-mock - NO_LICENSE
 - GenomicDataInfrastructure/starter-kit-lsaai - NO_LICENSE
+- elixir-europe/beacon-network-backend - LGPL-2.1
+- elixir-europe/beacon-network-ui - Apache-2.0
 
 ## Not reviewed component
 - LS-AAI

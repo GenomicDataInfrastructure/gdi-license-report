@@ -46,6 +46,8 @@ jobs:
             sw-name: starter-kit-lsaai
           - repository: neicnordic/sensitive-data-archive
             sw-name: neicnordic/sensitive-data-archive
+          - repository: NBISweden/sda-cli
+            sw-name: sda-cli
           - repository: elixir-europe/beacon-network-backend
             sw-name: beacon-network-backend
           - repository: elixir-europe/beacon-network-ui

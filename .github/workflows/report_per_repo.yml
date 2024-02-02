@@ -48,6 +48,10 @@ jobs:
             sw-name: neicnordic/sensitive-data-archive
           - repository: NBISweden/sda-cli
             sw-name: sda-cli
+          - repository: elixir-europe/beacon-network-backend
+            sw-name: beacon-network-backend
+          - repository: elixir-europe/beacon-network-ui
+            sw-name: beacon-network-ui
             
     runs-on: ubuntu-latest
     steps:
